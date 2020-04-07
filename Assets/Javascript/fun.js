@@ -94,8 +94,6 @@ function displayAnimalImages() {
           $("#results-div-col3").append(gifDiv);
         }
       }
-
-
     }
 
     //When the user clicks a gif in the search results section...
