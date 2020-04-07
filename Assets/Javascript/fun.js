@@ -34,7 +34,7 @@ function displayAnimalImages() {
 
   var animal = $(this).attr("data-name");
 
-  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=79gowOpodV0TWmPUz2HazCskPfvnY5FM&limit=10";
+  var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=79gowOpodV0TWmPUz2HazCskPfvnY5FM&limit=11";
 
   // Create AJAX call
   $.ajax({
@@ -55,7 +55,7 @@ function displayAnimalImages() {
       // Only take action if the gif has an appropriate rating. 
       // This should not matter. Did extensive testing on this site and did not find pg-13 or r rated gifs for any of the animals tested.
       //But, adding this if statement just in case...
-      if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+      if (results[i].rating !== "r" ) {
 
         //Create div element to hold gif image.. 
         var gifDiv = $("<div class='item'>");
